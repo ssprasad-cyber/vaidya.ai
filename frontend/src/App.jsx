@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+import PatientDashboard from  './pages/patient/PatientDashboard';
+// import Dashboard from  './pages/doctor/Dashboard';
+import HospitalAuth from './pages/patient/HospitalAuth';
+import DoctorAuth from './pages/doctor/DoctorAuth';
+import HospitalDashboard from './pages/admin/HospitalDashboard';
+import AdminAuth from './pages/admin/AdminAuth';
+
+import GetStarted from './pages/GetStarted';
+import AnimatedCounter from './pages/AnimatedCounter';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        {/* Add more routes here as you build more pages */}
+
+        <Route path="/dlogin" element={<DoctorAuth />} />
+        <Route path="/Plogin" element={<HospitalAuth />} />
+        <Route path="/dashboard" element={<PatientDashboard />} />
+        <Route path="/admin" element={<HospitalDashboard />} />
+        <Route path="/Auth" element={<AdminAuth />} />
+        {/* <Route path="/dashboardtrash" element={<Dashboard />} /> */}
+        <Route path="/getstarted" element={<GetStarted />} />
+        {/* Add more routes as needed */}
+        <Route path="/animated-counter" element={<AnimatedCounter start={0} end={10000} duration={2000} suffix=" patients" />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
