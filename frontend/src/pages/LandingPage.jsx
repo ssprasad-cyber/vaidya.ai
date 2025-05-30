@@ -364,9 +364,9 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = '', prefix = '' }) => 
                       <stat.icon className="h-6 w-6 text-white" />
                     </div>
                     <AnimatedCounter 
-                              end={stat.number} 
-                              suffix={suffix} 
-                              prefix={prefix}
+                              end={stat.number.replace(/[^0-9]/g, '')} 
+                              suffix={stat.suffix} 
+                              prefix={stat.prefix}
                               duration={2500}
                             />
                   <div className="text-blue-100 text-sm md:text-base">{stat.label}</div>
