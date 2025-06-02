@@ -8,7 +8,8 @@ import DoctorAuth from './pages/doctor/DoctorAuth';
 import HospitalDashboard from './pages/admin/HospitalDashboard';
 import AdminAuth from './pages/admin/AdminAuth';
 import GetStarted from './pages/GetStarted';
-
+import AIPredictions from './pages/AI/AIPredictions';
+import AIPredictionPage from './pages/AI/AIPredictionPage';
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
         <Route path="/doc" element={<Dashboard />} />
         <Route path="/getstarted" element={<GetStarted />} />
         {/* Add more routes as needed */}
+        <Route path="/ai-DocDashboard" element={<AIPredictions />} />
+        <Route path="/ai-Prediction" element={<AIPredictionPage />} />
+        
+        {/* Catch-all route for 404 */}
       </Routes>
     </Router>
   );
