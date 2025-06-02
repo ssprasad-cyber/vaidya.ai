@@ -43,7 +43,7 @@ const GetStarted = () => {
                 <Heart className="w-10 h-10 text-white animate-pulse" />
               </div>
               <h1 className="text-4xl font-bold text-gray-900 mb-2">
-                Welcome to <span className="text-blue-600">MediCare</span>
+                Welcome to <span className="text-blue-600">Vaidya.Ai</span>
               </h1>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Your comprehensive healthcare management platform. Choose your role to get started with personalized features.

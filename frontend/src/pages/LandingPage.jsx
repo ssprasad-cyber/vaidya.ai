@@ -21,6 +21,7 @@ import {
   Sparkles,
   Star
 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const LandingPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,6 +29,7 @@ const LandingPage = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const heroRef = useRef(null);
   const particlesRef = useRef([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -227,7 +229,7 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = '', prefix = '' }) => 
                 <Heart className="h-6 w-6 text-white animate-pulse" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-                MediCare Pro
+                Vaidya.Ai
               </span>
             </div>
             
@@ -244,7 +246,9 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = '', prefix = '' }) => 
                 Contact
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-500 transition-all duration-300 group-hover:w-full"></span>
               </a>
-              <button className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-2 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-200 relative overflow-hidden group">
+              <button className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-2 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-200 relative overflow-hidden group"
+               onClick={() => navigate('/getstarted')}
+              >
                 <span className="relative z-10">Get Started</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
@@ -266,7 +270,8 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = '', prefix = '' }) => 
               <a href="#features" className="block py-2 text-gray-700 hover:text-blue-600 transition-colors">Features</a>
               <a href="#about" className="block py-2 text-gray-700 hover:text-blue-600 transition-colors">About</a>
               <a href="#contact" className="block py-2 text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
-              <button className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-2 rounded-full mt-2 transform hover:scale-105 transition-all">
+              <button className="w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-2 rounded-full mt-2 transform hover:scale-105 transition-all"
+               onClick={() => navigate('/getstarted')}>
                 Get Started
               </button>
             </div>
@@ -374,6 +379,7 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = '', prefix = '' }) => 
                 </div>
               </Card3D>
             ))}
+            
           </div>
         </div>
       </section>
@@ -434,7 +440,7 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = '', prefix = '' }) => 
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-                  Why Choose MediCare Pro?
+                  Why Choose Vaidya.Ai?
                 </span>
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
@@ -512,7 +518,7 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = '', prefix = '' }) => 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {[
               { icon: Phone, title: "Call Us", info: "+1 (555) 123-4567" },
-              { icon: Mail, title: "Email Us", info: "hello@medicarepro.com" },
+              { icon: Mail, title: "Email Us", info: "hello@Vaidya.Aipro.com" },
               { icon: MapPin, title: "Visit Us", info: "123 Healthcare Ave, Medical City" }
             ].map((contact, index) => (
               <Card3D key={index} className="text-center">
@@ -544,10 +550,10 @@ const AnimatedCounter = ({ end, duration = 2000, suffix = '', prefix = '' }) => 
               <div className="bg-gradient-to-r from-blue-600 to-cyan-500 p-2 rounded-xl">
                 <Heart className="h-6 w-6 text-white" />
               </div>
-              <span className="text-xl font-bold">MediCare Pro</span>
+              <span className="text-xl font-bold">Vaidya.Ai</span>
             </div>
             <div className="text-gray-400 text-center md:text-right">
-              <p>&copy; 2025 MediCare Pro. All rights reserved.</p>
+              <p>&copy; 2025 Vaidya.Ai. All rights reserved.</p>
               <p className="text-sm mt-1">Transforming healthcare, one system at a time.</p>
             </div>
           </div>

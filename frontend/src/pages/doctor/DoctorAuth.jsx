@@ -191,7 +191,7 @@ const DoctorAuth = () => {
                   <Stethoscope className="w-12 h-12 text-white" />
                 </div>
                 <div className="ml-4">
-                  <h1 className="text-4xl font-bold text-gray-800">MediCare Pro</h1>
+                  <h1 className="text-4xl font-bold text-gray-800">Vaidya.Ai</h1>
                   <p className="text-gray-600">Healthcare Professional Portal</p>
                 </div>
               </div>
@@ -222,7 +222,7 @@ const DoctorAuth = () => {
             </div>
 
             <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-6 text-white">
-              <h3 className="text-lg font-semibold mb-3">Why Choose MediCare Pro?</h3>
+              <h3 className="text-lg font-semibold mb-3">Why Choose Vaidya.Ai?</h3>
               <ul className="space-y-2 text-sm">
                 <li>• Streamlined patient management</li>
                 <li>• Digital prescription system</li>
@@ -245,7 +245,7 @@ const DoctorAuth = () => {
                   <Stethoscope className="w-8 h-8 text-white" />
                 </div>
                 <div className="ml-3">
-                  <h1 className="text-2xl font-bold text-gray-800">MediCare Pro</h1>
+                  <h1 className="text-2xl font-bold text-gray-800">Vaidya.Ai</h1>
                   <p className="text-gray-600 text-sm">Healthcare Professional Portal</p>
                 </div>
               </div>
@@ -556,7 +556,7 @@ const DoctorAuth = () => {
                 )}
                 
                 <p className="text-gray-600 text-sm">
-                  {isLogin ? "New to MediCare Pro? " : "Already have an account? "}
+                  {isLogin ? "New to Vaidya.Ai? " : "Already have an account? "}
                   <button
                     type="button"
                     onClick={() => setIsLogin(!isLogin)}
@@ -577,7 +577,7 @@ const DoctorAuth = () => {
 
           {/* Footer */}
           <div className="text-center mt-6 text-gray-500 text-sm">
-            <p>© 2024 MediCare Pro. All rights reserved.</p>
+            <p>© 2024 Vaidya.Ai. All rights reserved.</p>
             <p>Secure platform for healthcare professionals.</p>
           </div>
         </div>

@@ -145,7 +145,7 @@ const HospitalAuth = () => {
                 <Heart className="w-12 h-12 text-white" />
               </div>
               <div className="ml-4">
-                <h1 className="text-4xl font-bold text-gray-800">MediCare</h1>
+                <h1 className="text-4xl font-bold text-gray-800">Vaidya.Ai</h1>
                 <p className="text-gray-600">Hospital Management System</p>
               </div>
             </div>
@@ -183,7 +183,7 @@ const HospitalAuth = () => {
                   <Heart className="w-8 h-8 text-white" />
                 </div>
                 <div className="ml-3">
-                  <h1 className="text-2xl font-bold text-gray-800">MediCare</h1>
+                  <h1 className="text-2xl font-bold text-gray-800">Vaidya.Ai</h1>
                   <p className="text-gray-600 text-sm">Hospital Management</p>
                 </div>
               </div>
@@ -387,7 +387,7 @@ const HospitalAuth = () => {
 
           {/* Footer */}
           <div className="text-center mt-6 text-gray-500 text-sm">
-            <p>© 2024 MediCare Hospital. All rights reserved.</p>
+            <p>© 2024 Vaidya.Ai Hospital. All rights reserved.</p>
             <p>Your health data is protected and secure.</p>
           </div>
         </div>
