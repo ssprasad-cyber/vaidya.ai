@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { User, Lock, Mail, Phone, Calendar, MapPin, Eye, EyeOff, Stethoscope, GraduationCap, Award, Shield, Building, Clock, UserCheck } from 'lucide-react';
+import { useNavigate } from 'react-router-dom'; 
 
 const DoctorAuth = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -27,6 +28,8 @@ const DoctorAuth = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const navigate = useNavigate(); // <-- Add this line
+  
 
   const specializations = [
     'Cardiology', 'Dermatology', 'Emergency Medicine', 'Endocrinology',
@@ -103,11 +106,13 @@ const DoctorAuth = () => {
     e.preventDefault();
     if (validateForm()) {
       if (isLogin) {
-        console.log('Doctor login attempt:', { email: formData.email, password: formData.password });
-        alert('Doctor login successful! (This is a demo)');
+        // Simulate authentication and set a token
+        localStorage.setItem('doctor_token', 'demo_token');
+        navigate('/doc'); // <-- Redirect after login
       } else {
-        console.log('Doctor registration attempt:', formData);
-        alert('Doctor registration successful! Pending verification. (This is a demo)');
+        // Simulate registration and set a token
+        localStorage.setItem('doctor_token', 'demo_token');
+        navigate('/doc'); // <-- Redirect after registration
       }
     }
   };
