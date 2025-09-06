@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { User, Lock, Mail, Phone, Calendar, MapPin, Eye, EyeOff, Stethoscope, GraduationCap, Award, Shield, Building, Clock, UserCheck } from 'lucide-react';
 import { useNavigate } from 'react-router-dom'; 
+import { useAuth } from '../../context/AuthContext';    
 
 const DoctorAuth = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);  
+  const { login } = useAuth();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -107,12 +109,13 @@ const DoctorAuth = () => {
     if (validateForm()) {
       if (isLogin) {
         // Simulate authentication and set a token
-        localStorage.setItem('doctor_token', 'demo_token');
-        navigate('/doc'); // <-- Redirect after login
+        login('doctor', 'demo_token');
+        navigate('/doctor/dashboard');
       } else {
         // Simulate registration and set a token
-        localStorage.setItem('doctor_token', 'demo_token');
-        navigate('/doc'); // <-- Redirect after registration
+        login('doctor', 'demo_token');
+        navigate('/doctor/dashboard');
+        
       }
     }
   };

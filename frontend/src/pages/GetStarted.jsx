@@ -11,12 +11,12 @@ const GetStarted = () => {
 
   const handleContinuePatient = () => {
     // Navigate to patient login/register page
-    window.location.href = '/Plogin';
+    window.location.href = '/patient/auth';
   };
 
   const handleContinueProvider = () => {
     // Navigate to provider login/register page  
-    window.location.href = '/dlogin';
+    window.location.href = '/doctor/auth';
   };
 
   return (
